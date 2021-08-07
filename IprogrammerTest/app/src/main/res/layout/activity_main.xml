@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <include
+        android:id="@+id/container_header_lyt"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        layout="@layout/main_header"/>
+
+    <include
+        android:id="@+id/empty_lyt"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        layout="@layout/empty_list"
+        android:visibility="gone"
+        android:layout_below="@id/container_header_lyt"
+        />
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/photo_recy"
+        android:layout_below="@id/container_header_lyt"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="3dp"
+        tools:listitem="@layout/photo_listitem"
+        />
+</RelativeLayout>
